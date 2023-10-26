@@ -7,7 +7,9 @@ export default function RandomUser2() {
     <main className="flex flex-col gap-4 justify-center items-center h-screen">
       <p className="text-4xl font-bold">Random User 2</p>
 
-      <RandomUser />
+      <Suspense fallback={<p>Loading user 2</p>}>
+        <RandomUser />
+      </Suspense>
     </main>
   )
 }
