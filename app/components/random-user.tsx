@@ -1,7 +1,7 @@
 async function getRandomUser() {
   const res = await fetch(`https://random-data-api.com/api/users/random_user`, {
     next: {
-      revalidate: 1,
+      revalidate: 0,
     },
   })
 
