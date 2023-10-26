@@ -1,8 +1,6 @@
 import { Suspense } from "react"
 import { RandomUser } from "../components/random-user"
 
-export const revalidate = 0
-
 export default function RandomUser3() {
   return (
     <main className="flex flex-col gap-4 justify-center items-center h-screen">
