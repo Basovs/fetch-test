@@ -1,3 +1,4 @@
+import { Suspense } from "react"
 import { RandomUser } from "../components/random-user"
 
 export const revalidate = 0
