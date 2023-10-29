@@ -1,12 +1,14 @@
-async function getRandomUser() {
-  const res = await fetch(`https://random-data-api.com/api/users/random_user`, {
-    cache: "no-store",
-  })
+import { unstable_noStore as noStore } from "next/cache"
+
+const getRandomUser = async () => {
+  const res = await fetch(`https://random-data-api.com/api/users/random_user`)
 
   return res.json()
 }
 
 export const RandomUser = async () => {
+  noStore()
+
   const randomUser = await getRandomUser()
 
   return (
