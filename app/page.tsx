@@ -1,11 +1,11 @@
-// import { Todo } from "./components/todo"
+import RevalidationForm from "./components/revalidation-form"
 
-export default function Home() {
+export default async function Home() {
   return (
     <main className="flex flex-col gap-4 justify-center items-center h-screen">
-      <p className="text-4xl font-bold">TODOS</p>
+      <RevalidationForm />
 
-      {/* <Todo slug="2" /> */}
+      <p className="text-4xl font-bold">HOME</p>
     </main>
   )
 }
