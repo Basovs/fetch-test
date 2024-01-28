@@ -2,19 +2,18 @@
 
 import { usePathname } from "next/navigation"
 import { ReactNode, useEffect } from "react"
+import { revalidatePathAction } from "./revalidate-path-action"
 
 export const RevalidateRouterCacheProvider = ({
   children,
-  revalidateFn,
 }: {
   children: ReactNode
-  revalidateFn: ({ pathname }: { pathname: string }) => Promise<void>
 }) => {
   const pathname = usePathname()
 
   useEffect(() => {
     console.log("REVALIDATING -> ")
-    revalidateFn({ pathname })
+    revalidatePathAction({ pathname })
 
     // window.addEventListener("focus", revalidateFn)
 
