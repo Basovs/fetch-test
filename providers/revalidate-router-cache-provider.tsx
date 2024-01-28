@@ -1,14 +1,10 @@
 "use client"
 
 import { usePathname } from "next/navigation"
-import { ReactNode, useEffect } from "react"
+import { useEffect } from "react"
 import { revalidatePathAction } from "./revalidate-path-action"
 
-export const RevalidateRouterCacheProvider = ({
-  children,
-}: {
-  children: ReactNode
-}) => {
+export const RevalidateRouterCacheProvider = () => {
   const pathname = usePathname()
 
   useEffect(() => {
@@ -20,7 +16,7 @@ export const RevalidateRouterCacheProvider = ({
     // return () => {
     //   window.removeEventListener("focus", revalidateFn)
     // }
-  }, [pathname])
+  }, [])
 
-  return <>{children}</>
+  return null
 }

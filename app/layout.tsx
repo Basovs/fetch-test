@@ -3,7 +3,6 @@ import { Inter } from "next/font/google"
 
 import "./globals.css"
 import { Navbar } from "./components/navbar"
-// import { RevalidateRouterCacheProvider } from "@/providers/revalidate-router-cache-provider"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -21,11 +20,9 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        {/* <RevalidateRouterCacheProvider> */}
         <Navbar />
 
         {children}
-        {/* </RevalidateRouterCacheProvider> */}
       </body>
     </html>
   )
