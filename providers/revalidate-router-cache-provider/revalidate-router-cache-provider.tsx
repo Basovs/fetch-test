@@ -2,7 +2,7 @@
 
 import { usePathname } from "next/navigation"
 import { useEffect } from "react"
-import { revalidatePathAction } from "./revalidate-path-action"
+import { revalidatePathAction } from "./revalidate-router-cache-provider.action"
 
 export const RevalidateRouterCacheProvider = () => {
   const pathname = usePathname()
