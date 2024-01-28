@@ -16,7 +16,7 @@ export const RevalidateRouterCacheProvider = () => {
     // return () => {
     //   window.removeEventListener("focus", revalidateFn)
     // }
-  }, [])
+  }, [pathname])
 
   return null
 }
